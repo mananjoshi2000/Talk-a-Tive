@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="132722124741-loebvot2nf6b2ugkfbmgbn92knn6fl3m.apps.googleusercontent.com">
+    <title>Chat App</title>
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+    </script>
+</head>
+<body>
+    <header class="navbar justify-content-center" style="background-color: rgb(31, 76, 224); color: rgb(255,255,255);">
+        <h1> <strong> Talkative </strong> </h1>
+    </header> 
+
+    <div class="text-center">
+        <form class="name-box" action="chat.html">
+            <label><h1>Enter your name!</h1></label><br>
+            <input class="username" type="text" name="username">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>

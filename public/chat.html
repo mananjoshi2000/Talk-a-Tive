@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talkative</title>
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous"
+    >  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="chat-box">
+        <div class=" chat-header navbar justify-content-center"> 
+            <strong>TALKATIVE </strong>
+        </div>
+        <div class="container">
+            <div class="row">
+                
+                <div class="chat-participants col-3">
+                    
+                </div>
+                <div class=" chat-messages col-9">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="chat-user col-3">
+                    <p>Username</p>
+                </div>
+                <div class=" chat-message-box col-9">
+                    <form class="form-inline message-form">
+                        <input type="text" class="message-input" name="message" placeholder="Enter Message">
+                        <button type="submit" class="send-button">Send</button>    
+                    </form>    
+                </div>
+            </div>
+        </div> 
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
