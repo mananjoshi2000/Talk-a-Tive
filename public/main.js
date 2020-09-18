@@ -1,5 +1,3 @@
-// const username = require('./user.js');
-// console.log(username());
 
 var socket = io();
 
@@ -23,7 +21,6 @@ socket.on('user-registered', username =>{
     document.querySelector('.chat-participants').appendChild(user_list);
 })
 
-// var username;
 
 socket.on('connect',()=>{
     sender = socket.id;
@@ -73,4 +70,3 @@ document.querySelector('.message-form').addEventListener('submit',(e)=>{
 });
 
 // document.querySelector('.chat-messages').scrollTop = document.querySelector('.chat-messages').scrollHeight
-

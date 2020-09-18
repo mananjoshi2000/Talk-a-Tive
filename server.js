@@ -8,7 +8,6 @@ const app = express();
 const server = http.createServer(app);
 const io = socket(server);
 
-
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/',express.static("public"));  
