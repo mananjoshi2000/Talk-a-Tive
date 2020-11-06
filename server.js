@@ -33,9 +33,12 @@ io.on("connect",(socket)=>{
         // console.log(data);
         var recieverSocketId = users[data.reciever];
         // console.log(recieverSocketId);
+
+        
+
         io.to(recieverSocketId).to(data.sender).emit("message",data);
     });
 });
 
-server.listen(process.env.PORT || 3000);   
+server.listen(process.env.PORT || 5000);   
  
